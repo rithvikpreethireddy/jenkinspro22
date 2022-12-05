@@ -1,7 +1,7 @@
 node {
     
     stage('Gitclone') {
-	   git branch: 'main', credentialsId: 'babbly', url: 'https://github.com/rithvikpreethireddy/jenkinspro22.git'
+	   git branch: 'main', credentialsId: 'f5bd9ca4-14b1-45d4-971d-ec7d0db94de2', url: 'https://github.com/rithvikpreethireddy/jenkinspro22.git'
        
     }
 	stage('java version') {
