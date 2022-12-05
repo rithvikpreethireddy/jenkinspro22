@@ -16,6 +16,12 @@ node {
 	       
           sh 'mvn validate'
     }
+	stage('sonar scan ') {
+	       
+          sh 'mvn sonar:sonar \
+              -Dsonar.host.url=http://18.142.104.213:9000 \
+              -Dsonar.login=a872146015635d0e3b67a3171a0435cfc5e16d31'
+    }
 	stage('maven compile') {
 	       
           sh 'mvn compile'
@@ -27,6 +33,10 @@ node {
 	stage('maven package') {
 	       
           sh 'mvn package'
+    }
+	stage('maven deploy') {
+	       
+          sh 'mvn deploy'
     }
 }
 
